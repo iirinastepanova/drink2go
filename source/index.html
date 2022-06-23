@@ -2,11 +2,198 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Барбершоп «Бородинский»</title>
+  <title>Drink2Go — интернет-магазин кофейных напитков</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body class="page__body">
+<body class="body">
+  <header>
+    <a class="header__logo"></a>
+    <nav class="navigation">
+      <a class="navigation__link" href="#">Главная</a>
+      <a class="navigation__link" href="#">Каталог</a>
+      <a class="navigation__link" href="#">Доставка</a>
+      <a class="navigation__link" href="#">О нас</a>
+      <a class="" href="#">
+        <span class="visually-hidden">Личный кабинет.</span>
+      </a>
+      <a class="" href="#">
+        <span class="visually-hidden">Корзина.</span>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <img src="" alt="">
+      <h2 class="visually-hidden">Новинки.</h2>
+      <span class="">Новинка!</span>
+      <h3>Декаф Флэт Уайт</h3>
+      <p>Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+      <del>295₽</del>
+      <span>225₽</span>
+      <a class="" href="#">Заказать</a>
+    </section>
+
+    <section>
+      <span>Преимущества</span>
+      <h2>Главные причины выбрать Drink2Go</h2>
+      <ul>
+        <li class="">
+          <h3>Скорость</h3>
+          <p>Готовый напиток всегда под рукой — просто открой банку</p>
+        </li>
+        <li class="">
+          <h3>Удобство</h3>
+          <p>Легко помещается и в карман, и в маленькую сумочку</p>
+        </li>
+        <li class="">
+          <h3>Бодрость</h3>
+          <p>Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </li>
+        <li class="">
+          <h3>Экологичность</h3>
+          <p>Вся упаковка сделана из перерабатываемых материалов</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="catalog">
+      <span>Каталог</span>
+      <h2>Каталог кофейных напитков</h2>
+      <div class="catalog__filters">
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset>
+            <legend>Цена</legend>
+            <div class="range"></div> <!--для рэндж-бара и ползунков-->
+            <div class="price">
+              <input type="number" name="min-price" id="min-price">
+              <input type="number" name="max-price" id="max-price">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Наличие молока</legend>
+            <label>
+              <input type="radio" name="milk" value="no-matter" checked>
+              Неважно
+            </label>
+
+            <label>
+              <input type="radio" name="milk" value="only-animal">
+              Только животное
+            </label>
+
+            <label>
+              <input type="radio" name="milk" value="only-vegetable">
+              Только растительное
+            </label>
+
+            <label>
+              <input type="radio" name="milk" value="without-milk" disabled>
+              Без молока
+            </label>
+
+          </fieldset>
+
+          <fieldset>
+
+            <legend>Страна произрастания</legend>
+            <label>
+              <input type="checkbox" name="brazil" checked>
+              Бразилия
+            </label>
+            <label>
+              <input type="checkbox" name="ethiopia">
+              Эфиопия
+            </label>
+            <label>
+              <input type="checkbox" name="colombia">
+              Колумбия
+            </label>
+            <label>
+              <input type="checkbox" name="costa-rica">
+              Коста-Рика
+            </label>
+            <label>
+              <input type="checkbox" name="peru" disabled>
+              Перу
+            </label>
+
+          </fieldset>
+          <button type="reset">Сбросить фильтр</button>
+        </form>
+      </div>
+
+
+      <div class="catalog__sorting">
+        <form class="sorting" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="visually-hidden" for="sorting-type">Сортировка.</label>
+          <select class="sorting__type" id="sorting-type" name="sorting">
+            <option value="default">по умолчанию</option>
+            <option value="cheap-first">сначала дорогие</option>
+            <option value="expensive-first">сначала дешёвые</option>
+            <option value="high-rating">высокий рейтинг</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="catalog__cards cards">
+
+        <article class="card">
+          <img class="card__img" src="#" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="#" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+        </article>
+
+
+        <article class="card">
+          <img class="card__img" src="" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+        </article>
+
+
+        <article class="card">
+          <img class="card__img" src="" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+
+
+        <article class="card">
+          <img class="card__img" src="" alt="Кофе Декаф Флэт Уайт.">
+          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <span class="card__price">225₽</span>
+          <a class="card__button" href="#">В корзину</a>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer></footer>
 
 <script src="js/script.js"></script>
 </body>
