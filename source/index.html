@@ -9,33 +9,41 @@
 <body class="body">
   <header>
     <a class="header__logo"></a>
+    <p class="header__tagline">Интернет-магазин кофейных напитков</p>
+
     <nav class="navigation">
-      <a class="navigation__link" href="#">Главная</a>
-      <a class="navigation__link" href="#">Каталог</a>
-      <a class="navigation__link" href="#">Доставка</a>
-      <a class="navigation__link" href="#">О нас</a>
-      <a class="" href="#">
-        <span class="visually-hidden">Личный кабинет.</span>
-      </a>
-      <a class="" href="#">
-        <span class="visually-hidden">Корзина.</span>
-      </a>
+      <div class="navigation__header-container">
+        <a class="navigation__link" href="#">Главная</a>
+        <a class="navigation__link" href="#">Каталог</a>
+        <a class="navigation__link" href="#">Доставка</a>
+        <a class="navigation__link" href="#">О нас</a>
+      </div>
+
+      <div class="navigation__user-container">
+        <a class="navigation__link" href="#">
+          <span class="visually-hidden">Личный кабинет.</span>
+        </a>
+        <a class="navigation__link" href="#">
+          <span class="visually-hidden">Корзина.</span>
+        </a>
+      </div>
+
     </nav>
   </header>
   <main>
-    <section>
+    <section class="promo-slider">
       <img src="" alt="">
       <h2 class="visually-hidden">Новинки.</h2>
-      <span class="">Новинка!</span>
-      <h3>Декаф Флэт Уайт</h3>
-      <p>Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-      <del>295₽</del>
-      <span>225₽</span>
-      <a class="" href="#">Заказать</a>
+      <span class="promo-slider__label label">Новинка!</span>
+      <h3 class="promo-slider__title">Декаф Флэт Уайт</h3>
+      <p class="promo-slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+      <del class="promo-slider__old-price">295₽</del>
+      <span class="promo-slider__price item-price">225₽</span>
+      <a class="promo-slider__button button" href="#">Заказать</a>
     </section>
 
-    <section>
-      <span>Преимущества</span>
+    <section class="advantages">
+      <span class="advantages__label label">Преимущества</span>
       <h2>Главные причины выбрать Drink2Go</h2>
       <ul>
         <li class="">
@@ -190,10 +198,77 @@
 
       </div>
 
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a class="pagination__link" href="#"></a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#"></a>
+          </li>
+        </ul>
+      </div>
+
     </section>
 
   </main>
-  <footer></footer>
+  <footer>
+    <section class="map">
+      <h2 class="visually-hidden">Расположение оффлайн магазина Drink2Go.</h2>
+      <div class="map__container"></div>
+    </section>
+
+    <section class="socials">
+      <h2 class="visually-hidden">Ссылки на соцсети Drink2Go.</h2>
+      <img class="" src="#" alt="Логотип Drink2Go.">
+      <div class="socials__container">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">ВКонтакте.</span>
+        </a>
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Пинтерест.</span>
+        </a>
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Одноклассники.</span>
+        </a>
+      </div>
+    </section>
+
+    <nav class="navigation navigation--footer">
+      <div class="navigation__footer-container">
+        <h4 class="navigation__title">Интернет-магазин</h4>
+        <a class="navigation__link" href="#">Каталог</a>
+        <a class="navigation__link" href="#">Доставка</a>
+        <a class="navigation__link" href="#">Способы оплаты</a>
+        <a class="navigation__link" href="#">О нас</a>
+      </div>
+      <div class="navigation__container">
+        <h4 class="navigation__title">Медиа</h4>
+        <a class="navigation__link" href="#">Блог</a>
+        <a class="navigation__link" href="#">Информация для СМИ</a>
+        <a class="navigation__link" href="#">Правовая информация</a>
+      </div>
+      <div class="navigation__container">
+        <h4 class="navigation__title">Контакты</h4>
+        <address class="navigation__contacts">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+        <a class="navigation__contacts" href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
+      </div>
+    </nav>
+
+    <div class="developer">
+      <a class="developer__link" href="#">Разработано в HTML Academy</a>
+    </div>
+
+  </footer>
 
 <script src="js/script.js"></script>
 </body>
