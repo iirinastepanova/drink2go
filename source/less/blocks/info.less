@@ -1,0 +1,36 @@
+.info {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: info;
+  }
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: @violett;
+}
+
+.info__address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.info__phone {
+  font-size: 14px;
+  line-height: 20px;
+  color: @base-black;
+  text-decoration: none;
+}

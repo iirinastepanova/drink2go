@@ -1,0 +1,14 @@
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: pagination;
+  }
+}
