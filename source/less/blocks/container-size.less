@@ -1,0 +1,13 @@
+.container-size {
+  max-width: @max-width-mobile;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: @max-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @max-width-desktop;
+  }
+}
