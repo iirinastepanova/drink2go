@@ -80,63 +80,65 @@
 
       <section class="catalog">
         <h2 class="catalog__title title">Каталог кофейных напитков</h2>
-          <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="catalog__fieldset-wrapper">
-              <fieldset class="catalog__fieldset fieldset">
-                <legend class="fieldset__legend">Цена</legend>
-                <div class="range"></div> <!--для рэндж-бара и ползунков-->
-                <div class="price">
-                  <input type="number" name="min-price" id="min-price">
-                  <input type="number" name="max-price" id="max-price">
-                </div>
-              </fieldset>
-              <fieldset class="catalog__fieldset fieldset">
-                <legend class="fieldset__legend">Наличие молока</legend>
-                <label class="fieldset__label">
-                  <input type="radio" name="milk" value="no-matter" checked>
-                  Неважно
-                </label>
-                <label class="fieldset__label">
-                  <input type="radio" name="milk" value="only-animal">
-                  Только животное
-                </label>
-                <label class="fieldset__label">
-                  <input type="radio" name="milk" value="only-vegetable">
-                  Только растительное
-                </label>
-                <label class="fieldset__label">
-                  <input type="radio" name="milk" value="without-milk" disabled>
-                  Без молока
-                </label>
-              </fieldset>
+        <div class="catalog__form">
+          <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="filters__wrapper">
+                <fieldset class="filters__fieldset fieldset">
+                  <legend class="fieldset__legend">Цена</legend>
+                  <div class="range"></div> <!--для рэндж-бара и ползунков-->
+                  <div class="price-inputs">
+                    <input class="price-inputs__field" type="number" name="min-price" id="min-price">
+                    <input class="price-inputs__field" type="number" name="max-price" id="max-price">
+                  </div>
+                </fieldset>
+                <fieldset class="filters__fieldset fieldset">
+                  <legend class="fieldset__legend">Наличие молока</legend>
+                  <label class="fieldset__label">
+                    <input type="radio" name="milk" value="no-matter" checked>
+                    Неважно
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="radio" name="milk" value="only-animal">
+                    Только животное
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="radio" name="milk" value="only-vegetable">
+                    Только растительное
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="radio" name="milk" value="without-milk" disabled>
+                    Без молока
+                  </label>
+                </fieldset>
 
-              <fieldset class="catalog__fieldset fieldset">
-                <legend class="fieldset__legend">Страна произрастания</legend>
-                <label class="fieldset__label">
-                  <input type="checkbox" name="brazil" checked>
-                  Бразилия
-                </label>
-                <label class="fieldset__label">
-                  <input type="checkbox" name="ethiopia">
-                  Эфиопия
-                </label>
-                <label class="fieldset__label">
-                  <input type="checkbox" name="colombia">
-                  Колумбия
-                </label>
-                <label class="fieldset__label">
-                  <input type="checkbox" name="costa-rica">
-                  Коста-Рика
-                </label>
-                <label class="fieldset__label">
-                  <input type="checkbox" name="peru" disabled>
-                  Перу
-                </label>
-              </fieldset>
-            </div>
+                <fieldset class="filters__fieldset fieldset">
+                  <legend class="fieldset__legend">Страна произрастания</legend>
+                  <label class="fieldset__label">
+                    <input type="checkbox" name="brazil" checked>
+                    Бразилия
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="checkbox" name="ethiopia">
+                    Эфиопия
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="checkbox" name="colombia">
+                    Колумбия
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="checkbox" name="costa-rica">
+                    Коста-Рика
+                  </label>
+                  <label class="fieldset__label">
+                    <input type="checkbox" name="peru" disabled>
+                    Перу
+                  </label>
+                </fieldset>
+              </div>
 
-            <button class="catalog__form-button" type="reset">Сбросить фильтр</button>
-          </form>
+              <button class="filters__button" type="reset">Сбросить фильтр</button>
+            </form>
+          </div>
 
 
         <div class="catalog__sorting">
