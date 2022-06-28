@@ -7,10 +7,27 @@
   }
 }
 
-.filters__fieldset {
+.filters__group {
   display: flex;
   flex-direction: column;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+  min-inline-size: 280px;
   border: none;
+}
+
+.filters__legend {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.filters__label {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 
@@ -35,4 +52,50 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+
+// form__control form__control--radio
+.filters__input-radio {
+  position: relative;
+  .visually-hidden;
+}
+.filters__control-radio {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  background-color: @white;
+  border: 2px solid @violett;
+  border-radius: 50%;
+
+  // &:hover {
+  //   border: 1px solid #bababa;
+  // }
+
+  // &:focus {
+  //   outline: 1px solid @grey-light;
+  // }
+}
+
+//для радио-кнопки checked
+.filters__control-radio::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: @violett;
+  border-radius: 50%;
+  display: none;
+}
+
+
+.filters__input-radio:checked + .filters__control-radio::before {
+  display: block;
 }
