@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-left: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
@@ -14,9 +15,14 @@
 }
 
 .pagination__button {
+  display: block;
+  box-sizing: border-box;
+  min-width: 40px;
+  max-width: 80px;
   margin-right: 20px;
   padding: 8px;
-  max-width: 40px; //???
+  text-align: center;
+   //???
 }
 
 .pagination__button:last-child {
