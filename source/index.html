@@ -78,7 +78,7 @@
         </ul>
       </section>
 
-      
+
       <section class="catalog">
         <div class="catalog__wrapper">
           <h2 class="catalog__title title">Каталог кофейных напитков</h2>
@@ -119,24 +119,29 @@
 
                   <fieldset class="filters__group">
                     <legend class="filters__legend">Страна произрастания</legend>
-                    <label class="filters__label">
-                      <input type="checkbox" name="brazil" checked>
+                    <label class="filters__label filters__label--checkbox">
+                      <input class="filters__input-checkbox" type="checkbox" name="brazil" checked>
+                      <span class="filters__control-checkbox"></span>
                       Бразилия
                     </label>
-                    <label class="filters__label">
-                      <input type="checkbox" name="ethiopia">
+                    <label class="filters__label filters__label--checkbox">
+                      <input class="filters__input-checkbox" type="checkbox" name="ethiopia">
+                      <span class="filters__control-checkbox"></span>
                       Эфиопия
                     </label>
-                    <label class="filters__label">
-                      <input type="checkbox" name="colombia">
+                    <label class="filters__label filters__label--checkbox">
+                      <input class="filters__input-checkbox" type="checkbox" name="colombia">
+                      <span class="filters__control-checkbox"></span>
                       Колумбия
                     </label>
-                    <label class="filters__label">
-                      <input type="checkbox" name="costa-rica">
+                    <label class="filters__label filters__label--checkbox">
+                      <input class="filters__input-checkbox" type="checkbox" name="costa-rica">
+                      <span class="filters__control-checkbox"></span>
                       Коста-Рика
                     </label>
-                    <label class="filters__label">
-                      <input type="checkbox" name="peru" disabled>
+                    <label class="filters__label filters__label--checkbox">
+                      <input class="filters__input-checkbox" type="checkbox" name="peru" disabled>
+                      <span class="filters__control-checkbox"></span>
                       Перу
                     </label>
                   </fieldset>
@@ -149,7 +154,7 @@
 
           <div class="catalog__sorting">
             <form class="sorting" action="https://echo.htmlacademy.ru/" method="get">
-              <label class="sorting__label" for="sorting-type">Сортировка</label>
+              <label class="sorting__label" for="sorting-type">Сортировка:</label>
               <select class="sorting__type" id="sorting-type" name="sorting">
                 <option value="default">по умолчанию</option>
                 <option value="cheap-first">сначала дорогие</option>
@@ -162,8 +167,10 @@
           <div class="catalog__cards">
 
             <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-1.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-1.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
               <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
@@ -172,40 +179,10 @@
             </article>
 
             <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-2.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="card__inner-container">
-                <span class="card__price item-price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
-              </div>
-            </article>
-
-
-            <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-3.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="card__inner-container">
-                <span class="card__price item-price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
-              </div>
-            </article>
-
-
-            <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-4.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="card__inner-container">
-                <span class="card__price item-price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
-              </div>
-            </article>
-
-            <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-5.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-2.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
               <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
@@ -215,8 +192,48 @@
 
 
             <article class="catalog__card card">
-              <img class="card__img" src="img/coffee-can-6.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-              <h3 class="card__title">Декаф Флэт Уайт</h3>
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-3.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__inner-container">
+                <span class="card__price item-price">225₽</span>
+                <a class="card__button button" href="#">В корзину</a>
+              </div>
+            </article>
+
+
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-4.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__inner-container">
+                <span class="card__price item-price">225₽</span>
+                <a class="card__button button" href="#">В корзину</a>
+              </div>
+            </article>
+
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-5.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="card__inner-container">
+                <span class="card__price item-price">225₽</span>
+                <a class="card__button button" href="#">В корзину</a>
+              </div>
+            </article>
+
+
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <img class="card__img" src="img/coffee-can-6.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <h3 class="card__title">Декаф Флэт Уайт</h3>
+              </a>
               <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
