@@ -1,9 +1,26 @@
-.navigation__link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  color: @base-black;
-  text-transform: uppercase;
-  text-decoration: none;
+.navigation {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+
+.navigation__link {
+  text-align: center;
+  padding: 20px 50px;
+  border-bottom: 1px solid @lavender;
+}
+
+
+.navigation__link-name {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+

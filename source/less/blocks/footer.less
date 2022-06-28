@@ -1,0 +1,29 @@
+.footer {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "map map"
+    "socials info"
+    "dev dev";
+  }
+}
+
+
+
+.footer__navigation {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: nav;
+  }
+}
+
+.footer__navigation-container {
+  display: flex;
+  flex-direction: column;
+}
+

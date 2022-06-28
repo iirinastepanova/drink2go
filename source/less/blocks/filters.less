@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  max-width: @max-width-mobile;
+  @media (min-width: @desktop-width) {
+    grid-area: filters;
+  }
+}
+
+.filters__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+
+.filters__button {
+  width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: @violett;
+  background-color: @white;
+  border: none;
+}
+
+.filters__wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
