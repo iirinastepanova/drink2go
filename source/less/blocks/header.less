@@ -7,7 +7,7 @@
   ;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
     "logo nav user"
   }
@@ -23,7 +23,7 @@
 .header__tagline {
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     display: block;
   }
 }
