@@ -12,21 +12,34 @@
   <body class="body">
     <header class="header">
 
-      <div class="header__logo-container">
+      <div class="header__container">
+
         <a class="header__logo">
-          <img class="header__logo-mobile" src="img/logo-small.svg" width="32" height="36" alt="Логотип Drink2go.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-big.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-medium.svg">
+            <img class="header__logo-img" src="img/logo-small.svg" width="32" height="36" alt="Логотип Drink2go.">
+          </picture>
         </a>
         <p class="header__tagline">Интернет-магазин кофейных напитков</p>
       </div>
 
-      <div class="account">
+      <div class="account navigation--nojs"> <!-- с js убрать класс navigation--nojs, добавить navigation--closed-->
         <a class="account__link link" href="#">
+          <svg class="account__icon account__icon--user" viewBox="0 0 16 16" aria-hidden="true" focusable="false" width="16" height="16" fill="none">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
           <span class="account__link-name">Войти</span>
         </a>
         <a class="account__link link" href="#">
+          <svg class="account__icon account__icon--cart" viewBox="0 0 16 16" aria-hidden="true" focusable="false" width="16" height="16" fill="none">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
           <span class="account__link-name">Корзина</span>
         </a>
-        <button class="account__close-button">0</button>
+        <button class="account__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
       </div>
 
 
@@ -40,7 +53,14 @@
     <main>
       <section class="promo">
         <div class="promo__container-size container-size">
-          <img class="promo__img" src="img/flat_white_img.png" alt="" width="280" height="280">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-img-desktop.webp, img/promo-img-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-img-tablet.webp, img/promo-img-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/promo-img-mobile.webp, img/promo-img-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/promo-img-desktop.png, img/promo-img-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-img-tablet.png, img/promo-img-tablet@2x.png 2x">
+            <img class="promo__img" src="img/promo-img-mobile.png" srcset="img/promo-img-mobile@2x.png 2x" alt="Новинка Декаф Флэт Уайт." width="280" height="280">
+          </picture>
           <div class="promo__container">
             <h2 class="visually-hidden">Новинки.</h2>
             <span class="promo__label label">Новинка!</span>
@@ -59,19 +79,19 @@
         <span class="advantages__label label">Преимущества</span>
         <h2 class="advantages__title title">Главные причины выбрать Drink2Go</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--speed">
             <h3 class="advantages__item-title title">Скорость</h3>
             <p class="advantages__item-description description">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--easy">
             <h3 class="advantages__item-title title">Удобство</h3>
-            <p  class="advantages__item-description description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
+            <p class="advantages__item-description description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--energy">
             <h3 class="advantages__item-title title">Бодрость</h3>
             <p  class="advantages__item-description description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item--eco">
             <h3 class="advantages__item-title title">Экологичность</h3>
             <p   class="advantages__item-description description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
           </li>
@@ -88,7 +108,7 @@
                 <div class="filters__wrapper">
                   <fieldset class="filters__group">
                     <legend class="filters__legend">Цена</legend>
-                    
+
                     <div class="price-inputs">
                       <div class="price-inputs__range">
                         <div class="price-inputs__scale">
@@ -179,7 +199,10 @@
 
             <article class="catalog__card card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-1.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-1.webp, img/coffee-can-1@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-1.png" srcset="img/coffee-can-1@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
                 <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
               <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -191,33 +214,10 @@
 
             <article class="catalog__card card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-2.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title title">Декаф Флэт Уайт</h3>
-              </a>
-              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-              <div class="card__inner-container">
-                <span class="card__price item-price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
-              </div>
-            </article>
-
-
-            <article class="catalog__card card">
-              <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-3.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title title">Декаф Флэт Уайт</h3>
-              </a>
-              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
-              <div class="card__inner-container">
-                <span class="card__price item-price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
-              </div>
-            </article>
-
-
-            <article class="catalog__card card">
-              <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-4.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-2.webp, img/coffee-can-2@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-2.png" srcset="img/coffee-can-2@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
                 <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
               <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -229,7 +229,10 @@
 
             <article class="catalog__card card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-5.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-3.webp, img/coffee-can-3@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-3.png" srcset="img/coffee-can-3@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
                 <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
               <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -238,11 +241,13 @@
                 <a class="card__button button" href="#">В корзину</a>
               </div>
             </article>
-
 
             <article class="catalog__card card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-6.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-4.webp, img/coffee-can-4@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-4.png" srcset="img/coffee-can-4@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
                 <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
               <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -251,6 +256,38 @@
                 <a class="card__button button" href="#">В корзину</a>
               </div>
             </article>
+
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-5.webp, img/coffee-can-5@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-5.png" srcset="img/coffee-can-5@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+              <div class="card__inner-container">
+                <span class="card__price item-price">225₽</span>
+                <a class="card__button button" href="#">В корзину</a>
+              </div>
+            </article>
+
+            <article class="catalog__card card">
+              <a class="card__link" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-6.webp, img/coffee-can-6@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-6.png" srcset="img/coffee-can-6@2x.png 2x" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
+                </picture>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
+              </a>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
+              <div class="card__inner-container">
+                <span class="card__price item-price">225₽</span>
+                <a class="card__button button" href="#">В корзину</a>
+              </div>
+            </article>
+
+
 
           </div>
 
@@ -286,17 +323,30 @@
       <section class="social">
         <h2 class="visually-hidden">Ссылки на соцсети Drink2Go.</h2>
         <div class="social__logo">
-          <img class="" src="img/logo-medium.svg" width="82" height="36" alt="Логотип Drink2go.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-big.svg">
+            <img class="social__logo-img" src="img/logo-medium.svg" width="82" height="36" alt="Логотип Drink2go.">
+          </picture>
+
         </div>
 
         <div class="social__container">
-          <a class="social__link" href="#">VK
+          <a class="social__link" href="#">
+            <svg class="social__icon social__icon--vk" viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="20" height="20" fill="none">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
             <span class="visually-hidden">ВКонтакте.</span>
           </a>
-          <a class="social__link" href="#">Pin
+          <a class="social__link" href="#">
+            <svg class="social__icon social__icon--pinterest" viewBox="0 0 22 22" aria-hidden="true" focusable="false" width="22" height="22" fill="none">
+              <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+            </svg>
             <span class="visually-hidden">Пинтерест.</span>
           </a>
-          <a class="social__link" href="#">OK
+          <a class="social__link" href="#">
+            <svg class="social__icon social__icon--ok" viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="20" height="20" fill="none">
+              <use xlink:href="img/sprite.svg#icon-ok"></use>
+            </svg>
             <span class="visually-hidden">Одноклассники.</span>
           </a>
         </div>

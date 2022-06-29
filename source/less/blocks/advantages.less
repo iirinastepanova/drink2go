@@ -63,12 +63,31 @@
 }
 
 .advantages__item {
+  position: relative;
   padding-top: 66px;
   margin-bottom: 18px;
+  background-position: center 6px;
+  background-repeat: no-repeat;
+
+  &--speed {
+    background-image:  url("../img/advantages-speed.svg");
+  }
+
+  &--easy {
+    background-image:  url("../img/advantages-easy.svg");
+  }
+
+  &--energy {
+    background-image:  url("../img/advantages-energy.svg");
+  }
+
+  &--eco {
+    background-image:  url("../img/advantages-eco.svg");
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
     padding-left: 81px;
+    background-position: 10px 1px;
   }
 }
-

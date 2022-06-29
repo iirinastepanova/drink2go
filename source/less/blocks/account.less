@@ -16,17 +16,80 @@
 }
 
 .account__link-name {
-  margin: auto;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+
+  @media (min-width: @desktop-width) {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
 }
 
-.account__close-button {
+.account__icon {
+  margin: auto;
+  fill: @base-black;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.account__toggle {
   width: 60px;
   height: 60px;
   background-color: @white;
   border: none;
   border-radius: 0;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
+
+.navigation--opened .account__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    right: 19px;
+    width: 20px;
+    height: 1px;
+    background-color: @base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.navigation--closed .account__toggle::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 19px;
+  width: 20px;
+  height: 1.5px;
+  background-color: @base-black;
+  box-shadow: 0 6px 0 0 @base-black, 0 12px 0 0 @base-black;
+}
+
+.account--closed + .navigation {
+  display: none;
+}
+
+//без javascript
+.navigation--nojs .account__toggle {
+  display: none;
+}
+

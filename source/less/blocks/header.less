@@ -14,17 +14,29 @@
 
 }
 
-.header__logo-container {
+
+.header__container {
   grid-area: logo;
   width: 75px;
   box-sizing: border-box;
   padding: 13px 20px;
 }
 
-.header__logo-mobile {
+.header__logo-img{
   display: block;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
 }
+
 .header__tagline {
   display: none;
 
