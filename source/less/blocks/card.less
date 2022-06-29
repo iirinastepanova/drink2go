@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  max-width: 70%;
-  min-width: 200px;
+  max-width: 88%;
+  min-width: 260px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -14,6 +14,8 @@
 
   @media (min-width: @tablet-width) {
     min-width: 349px;
+    padding: 48px 28px 28px;
+    
   }
 }
 
@@ -26,14 +28,34 @@
 
 .card__img {
   margin-right: auto;
+  margin-bottom: 23px;
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
 }
 
-.card__description {
+.card__title {
+  margin-bottom: 4px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
+  }
+}
+.card__description {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .card__price {
+  margin-top: 4px;
   margin-right: auto;
 }
 

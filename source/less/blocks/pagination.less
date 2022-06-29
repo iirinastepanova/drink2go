@@ -1,7 +1,20 @@
+.pagination {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    .padding-mobile;
+    margin-bottom: 40px;
+  }
+}
+
 .pagination__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 

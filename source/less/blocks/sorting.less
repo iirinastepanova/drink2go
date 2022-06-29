@@ -1,12 +1,16 @@
 .sorting {
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   width: 100%;
-  max-width: 350px;
+  .padding-mobile;
+  max-width: @max-width-mobile;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
+    max-width: @max-width-tablet;
+    margin-bottom: 29px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,6 +26,7 @@
 }
 
 .sorting__type {
+  width: 156px;
   font-family: inherit;
   font-weight: 600;
   font-size: 16px;

@@ -45,7 +45,7 @@
             <h2 class="visually-hidden">Новинки.</h2>
             <span class="promo__label label">Новинка!</span>
             <h3 class="promo__title">Декаф Флэт Уайт</h3>
-            <p class="promo__description description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
             <div class="promo__inner-container">
               <del class="promo__old-price item-old-price">295₽</del>
             <span class="promo__price item-price">225₽</span>
@@ -65,7 +65,7 @@
           </li>
           <li class="advantages__item">
             <h3 class="advantages__item-title title">Удобство</h3>
-            <p  class="advantages__item-description description">Легко помещается и в карман, и в маленькую сумочку</p>
+            <p  class="advantages__item-description description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
           </li>
           <li class="advantages__item">
             <h3 class="advantages__item-title title">Бодрость</h3>
@@ -73,7 +73,7 @@
           </li>
           <li class="advantages__item">
             <h3 class="advantages__item-title title">Экологичность</h3>
-            <p   class="advantages__item-description description">Вся упаковка сделана из перерабатываемых материалов</p>
+            <p   class="advantages__item-description description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
           </li>
         </ul>
       </section>
@@ -81,14 +81,25 @@
 
       <section class="catalog">
         <div class="catalog__wrapper">
+          <span class="catalog__label label">Каталог</span>
           <h2 class="catalog__title title">Каталог кофейных напитков</h2>
           <div class="catalog__form">
             <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
                 <div class="filters__wrapper">
                   <fieldset class="filters__group">
                     <legend class="filters__legend">Цена</legend>
-                    <div class="range"></div> <!--для рэндж-бара и ползунков-->
+                    
                     <div class="price-inputs">
+                      <div class="price-inputs__range">
+                        <div class="price-inputs__scale">
+                          <button class="price-inputs__toggle price-inputs__toggle--min" type="button">
+                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                          </button>
+                          <button class="price-inputs__toggle price-inputs__toggle--max" type="button">
+                            <span class="visually-hidden">Изменить масимальную цену.</span>
+                          </button>
+                        </div>
+                      </div> <!--для рэндж-бара и ползунков-->
                       <input class="price-inputs__field" type="number" name="min-price" id="min-price">
                       <input class="price-inputs__field" type="number" name="max-price" id="max-price">
                     </div>
@@ -117,7 +128,7 @@
                     </label>
                   </fieldset>
 
-                  <fieldset class="filters__group">
+                  <fieldset class="filters__group filters__group--country">
                     <legend class="filters__legend">Страна произрастания</legend>
                     <label class="filters__label filters__label--checkbox">
                       <input class="filters__input-checkbox" type="checkbox" name="brazil" checked>
@@ -152,26 +163,26 @@
             </div>
 
 
-          <div class="catalog__sorting">
-            <form class="sorting" action="https://echo.htmlacademy.ru/" method="get">
-              <label class="sorting__label" for="sorting-type">Сортировка:</label>
-              <select class="sorting__type" id="sorting-type" name="sorting">
-                <option value="default">по умолчанию</option>
-                <option value="cheap-first">сначала дорогие</option>
-                <option value="expensive-first">сначала дешёвые</option>
-                <option value="high-rating">высокий рейтинг</option>
-              </select>
-            </form>
-          </div>
+
+          <form class="sorting" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="sorting__label" for="sorting-type">Сортировка:</label>
+            <select class="sorting__type" id="sorting-type" name="sorting">
+              <option value="default">по умолчанию</option>
+              <option value="cheap-first">сначала дорогие</option>
+              <option value="expensive-first">сначала дешёвые</option>
+              <option value="high-rating">высокий рейтинг</option>
+            </select>
+          </form>
+
 
           <div class="catalog__cards">
 
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-1.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -181,9 +192,9 @@
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-2.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -194,9 +205,9 @@
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-3.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -207,9 +218,9 @@
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-4.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -219,9 +230,9 @@
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-5.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -232,9 +243,9 @@
             <article class="catalog__card card">
               <a class="card__link" href="#">
                 <img class="card__img" src="img/coffee-can-6.png" width="130" height="188" alt="Кофе Декаф Флэт Уайт.">
-                <h3 class="card__title">Декаф Флэт Уайт</h3>
+                <h3 class="card__title title">Декаф Флэт Уайт</h3>
               </a>
-              <p class="card__description description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="card__description">Кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__inner-container">
                 <span class="card__price item-price">225₽</span>
                 <a class="card__button button" href="#">В корзину</a>
@@ -243,7 +254,7 @@
 
           </div>
 
-          <!-- <div class="pagination"> -->
+          <div class="pagination">
             <ul class="pagination__list">
               <li class="pagination__button">
                 <a class="pagination__link" href="#"></a>
@@ -261,7 +272,7 @@
                 <a class="pagination__link" href="#"></a>
               </li>
             </ul>
-          <!-- </div> -->
+          </div>
         </div>
       </section>
 
@@ -306,8 +317,8 @@
           <a class="info__link link" href="#">Правовая информация</a>
         </div>
         <div class="info__container">
-          <h4 class="info__title">Контакты</h4>
-          <address class="info__address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+          <h4 class="info__title info__title--contacts">Контакты</h4>
+          <address class="info__address">Санкт-Петербург, набережная реки&nbsp;Карповки, дом 5</address>
           <a class="info__phone" href="tel:+7(999)999-99-99">+7 (999) 999-99-99</a>
         </div>
       </nav>
