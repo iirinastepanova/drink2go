@@ -6,6 +6,13 @@
   justify-content: flex-end;
   margin-left: auto;
 
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 350px; 
+  }
 }
 
 .account__link {
@@ -15,6 +22,12 @@
   min-width: 60px;
   max-width: 80px;
   padding: 8px;
+
+  @media (min-width: @desktop-width) {
+    padding: 32px 20px 32px 44px; 
+    min-width: auto;
+    max-width: none;
+  }
 }
 
 .account__link-name {
@@ -36,8 +49,9 @@
   fill: @base-black;
 
   @media (min-width: @desktop-width) {
-    display: none;
+    margin-right: 8px;
   }
+
 }
 
 .account__toggle {
@@ -75,25 +89,24 @@
 }
 
 
-// .navigation--closed .account__toggle::before {
-//   content: "";
-//   position: absolute;
-//   top: 22px;
-//   right: 22px;
-//   width: 17px;
-//   height: 1.5px;
-//   background-color: @base-black;
-//   box-shadow: 0 6px 0 0 @base-black, 0 12px 0 0 @base-black;
-// }
+.navigation--closed .account__toggle::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 17px;
+  height: 1.5px;
+  background-color: @base-black;
+  box-shadow: 0 6px 0 0 @base-black, 0 12px 0 0 @base-black;
+}
 
-// .navigation--closed + .navigation {
-//   display: none;
-// }
+.navigation--closed + .navigation {
+  display: none;
+}
 
-// //без javascript
+//без javascript
 
-// .navigation--nojs .account__toggle {
-//   // .visually-hidden;
-//   display: none;
-// }
+.navigation--nojs .account__toggle {
+  display: none;
+}
 

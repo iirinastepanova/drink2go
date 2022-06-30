@@ -21,18 +21,25 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
+    "label label"
     "title title"
-    "filters sort"
-    "filters cards"
+    "sort sort"
     ". cards"
     ". cards"
-    ". pagination"
+    ". cards"
+    "pagination pagination"
     ;
+    max-width: @max-width-desktop;
+    padding-top: 105px;
+    padding-bottom: 80px;
   }
 }
 
 .catalog__label {
   margin-bottom: 4px;
+  @media (min-width: @desktop-width) {
+    grid-area: label;
+  }
 }
 
 .catalog__title {
@@ -43,6 +50,7 @@
 
   @media (min-width: @desktop-width) {
     grid-area: title;
+    margin-bottom: 39px;
   }
 }
 
@@ -58,6 +66,11 @@
   @media (min-width: @tablet-width) {
     max-width: @max-width-tablet;
     margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -75,6 +88,8 @@
   @media (min-width: @desktop-width) {
     grid-area: cards;
     grid-template-columns: repeat(3, 1fr);
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

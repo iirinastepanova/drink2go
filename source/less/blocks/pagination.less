@@ -8,6 +8,10 @@
     .padding-mobile;
     margin-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-area: pagination;
+  }
 }
 
 .pagination__list {
@@ -20,10 +24,6 @@
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-area: pagination;
   }
 }
 
