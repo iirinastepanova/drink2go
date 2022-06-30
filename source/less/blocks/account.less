@@ -1,9 +1,11 @@
 .account {
+  position: relative;
   grid-area: user;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-left: auto;
+
 }
 
 .account__link {
@@ -73,23 +75,25 @@
 }
 
 
-.navigation--closed .account__toggle::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  right: 19px;
-  width: 20px;
-  height: 1.5px;
-  background-color: @base-black;
-  box-shadow: 0 6px 0 0 @base-black, 0 12px 0 0 @base-black;
-}
+// .navigation--closed .account__toggle::before {
+//   content: "";
+//   position: absolute;
+//   top: 22px;
+//   right: 22px;
+//   width: 17px;
+//   height: 1.5px;
+//   background-color: @base-black;
+//   box-shadow: 0 6px 0 0 @base-black, 0 12px 0 0 @base-black;
+// }
 
-.account--closed + .navigation {
-  display: none;
-}
+// .navigation--closed + .navigation {
+//   display: none;
+// }
 
-//без javascript
-.navigation--nojs .account__toggle {
-  display: none;
-}
+// //без javascript
+
+// .navigation--nojs .account__toggle {
+//   // .visually-hidden;
+//   display: none;
+// }
 
